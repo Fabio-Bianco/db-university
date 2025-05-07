@@ -52,6 +52,12 @@ WHERE `year` = 1 AND `period` LIKE '%1%';
 SELECT *
 FROM `exams`
 WHERE `date` = '2020-06-20' AND `time` > '14:00:00';
+
+ (versione con fn hour)
+SELECT *
+FROM `exams`
+WHERE `date` = '2020-06-20' AND HOUR(`time`) > 14;
+
 ```
 
 ---
@@ -61,7 +67,7 @@ WHERE `date` = '2020-06-20' AND `time` > '14:00:00';
 
 SELECT *
 FROM `degree_courses`
-WHERE `type` = 'magistrale';
+WHERE `level` = 'magistrale';
 
 
 SELECT *
